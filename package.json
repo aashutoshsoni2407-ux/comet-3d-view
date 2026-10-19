@@ -1,0 +1,24 @@
+{
+  "name": "comet-3d-view",
+  "version": "1.0.0",
+  "description": "COMET Storm Edition - Interactive 3D Canvas Scroll Experience & Order Terminal",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "echo Static assets ready for deployment"
+  },
+  "keywords": [
+    "canvas",
+    "scroll",
+    "animation",
+    "comet",
+    "3d-view",
+    "scrollytelling",
+    "footwear",
+    "ecommerce"
+  ],
+  "author": "Aashutosh Soni (Arya College, Jaipur)",
+  "license": "MIT"
+}

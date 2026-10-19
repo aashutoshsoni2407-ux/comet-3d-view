@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>AEGIS FOOTWEAR // All-Weather Performance</title>
+
+  <!-- Google Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600&family=Space+Grotesk:wght@600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-error": "#690005",
+            "on-primary-fixed": "#191c1e",
+            "tertiary-container": "#e0e2e9",
+            "surface-container-highest": "#343537",
+            "tertiary-fixed": "#e0e2e9",
+            "surface-container": "#1f2022",
+            "primary": "#ffffff",
+            "surface-container-high": "#292a2c",
+            "on-tertiary-fixed-variant": "#43474d",
+            "surface-dim": "#121315",
+            "on-tertiary-container": "#61656a",
+            "on-surface": "#e3e2e5",
+            "secondary-container": "#434a52",
+            "primary-fixed-dim": "#c4c7c9",
+            "secondary-fixed": "#dde3ed",
+            "on-background": "#e3e2e5",
+            "inverse-surface": "#e3e2e5",
+            "surface": "#121315",
+            "on-secondary-fixed": "#161c23",
+            "on-tertiary-fixed": "#181c21",
+            "surface-variant": "#343537",
+            "surface-container-lowest": "#0d0e10",
+            "secondary-fixed-dim": "#c1c7d1",
+            "error": "#ffb4ab",
+            "on-tertiary": "#2d3136",
+            "on-primary-fixed-variant": "#444749",
+            "tertiary-fixed-dim": "#c3c6cd",
+            "on-primary-container": "#626567",
+            "surface-bright": "#38393b",
+            "on-error-container": "#ffdad6",
+            "on-secondary-fixed-variant": "#41474f",
+            "on-secondary": "#2b3139",
+            "secondary": "#c1c7d1",
+            "inverse-on-surface": "#303033",
+            "on-primary": "#2d3133",
+            "error-container": "#93000a",
+            "primary-fixed": "#e0e3e5",
+            "on-secondary-container": "#b3b9c2",
+            "primary-container": "#e0e3e5",
+            "inverse-primary": "#5c5f61",
+            "on-surface-variant": "#c4c7c9",
+            "surface-tint": "#c4c7c9",
+            "surface-container-low": "#1b1c1e",
+            "background": "#121315",
+            "outline": "#8e9193",
+            "outline-variant": "#444749",
+            "tertiary": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-xs": "0.25rem",
+            "margin-md": "2rem",
+            "gutter": "1rem",
+            "space-lg": "1.5rem",
+            "margin": "1rem",
+            "space-xl": "2.5rem",
+            "space-sm": "0.5rem",
+            "margin-lg": "3.5rem",
+            "space-md": "1rem",
+            "gutter-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "label-md": ["Space Mono"],
+            "display-xl": ["Space Grotesk"],
+            "headline-md": ["Space Grotesk"],
+            "body-sm": ["Hanken Grotesk"],
+            "headline-sm": ["Space Grotesk"],
+            "headline-lg-mobile": ["Space Grotesk"],
+            "label-lg": ["Space Mono"],
+            "display-xl-mobile": ["Space Grotesk"],
+            "body-md": ["Hanken Grotesk"],
+            "label-sm": ["Space Mono"],
+            "body-lg": ["Hanken Grotesk"],
+            "headline-lg": ["Space Grotesk"]
+          },
+          "fontSize": {
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "400" }],
+            "display-xl": ["72px", { "lineHeight": "76px", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+            "headline-md": ["24px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "headline-sm": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.06em", "fontWeight": "700" }],
+            "display-xl-mobile": ["44px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "body-md": ["15px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.1em", "fontWeight": "400" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "headline-lg": ["40px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700" }]
+          }
+        }
+      }
+    };
+  </script>
+
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body class="bg-background font-body-md text-on-surface antialiased overflow-x-hidden">
+
+  <!-- Minimal Preloader -->
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="loader-track">
+        <div id="loader-bar" class="loader-bar"></div>
+      </div>
+      <span id="loader-text" class="loader-text">INITIALIZING 0%</span>
+    </div>
+  </div>
+
+  <!-- TRANSPARENT NAVIGATION BAR -->
+  <header id="main-nav" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-black/20 backdrop-blur-md border-b border-white/5">
+    <div class="max-w-[1440px] mx-auto px-margin md:px-margin-md lg:px-margin-lg h-16 md:h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-2.5 text-white no-underline group cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+        <span class="font-display font-black text-2xl tracking-tighter text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">COMET</span>
+        <span class="hidden sm:inline-block px-2 py-0.5 rounded text-[10px] font-mono tracking-widest text-neutral-300 bg-white/10 border border-white/15 uppercase backdrop-blur-sm">
+          STORM // JAIPUR HUB
+        </span>
+      </a>
+
+      <!-- Nav Links -->
+      <nav class="hidden md:flex items-center gap-5 lg:gap-7 font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">
+        <a href="#scroll-spacer" class="hover:text-white transition-colors">01. Overview</a>
+        <a href="#section-engineering" class="hover:text-white transition-colors">02. Engineering</a>
+        <a href="#section-validation" class="hover:text-white transition-colors">03. Telemetry</a>
+        <a href="#fit-matrix" class="hover:text-white transition-colors">04. Fit Guide</a>
+        <a href="#retailer-section" class="hover:text-white transition-colors">05. Retailer</a>
+        <a href="#order-now-section" class="text-white hover:text-white font-bold transition-colors flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>06. Order Now</span>
+        </a>
+      </nav>
+
+      <!-- Right Action / Order Now & Retailer Desk CTA -->
+      <div class="flex items-center gap-2.5">
+        <a href="#retailer-section" class="hidden sm:inline-flex px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-white/90 text-xs font-mono uppercase tracking-wider transition-all border border-white/5 no-underline">
+          Retailer Info
+        </a>
+        <a href="#order-now-section" id="nav-order-btn" class="px-4 py-2 rounded-lg bg-primary hover:bg-neutral-200 text-black font-label-md text-xs font-bold uppercase tracking-wider transition-all shadow-lg hover:shadow-white/20 flex items-center gap-1.5 cursor-pointer no-underline">
+          <span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+          <span>ORDER NOW</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- FIXED CANVAS VIEWPORT (Stays fixed behind content, zero black gaps) -->
+  <div class="canvas-viewport">
+    <canvas id="canvas"></canvas>
+
+    <!-- First Frame Brand Title: COMET in Bold -->
+    <div id="brand-overlay" class="brand-overlay absolute inset-0 flex flex-col items-center justify-center pointer-events-none select-none z-10">
+      <h1 class="brand-title font-black text-7xl sm:text-8xl md:text-9xl text-white tracking-tighter uppercase drop-shadow-[0_15px_35px_rgba(0,0,0,0.95)]">
+        COMET
+      </h1>
+      <span class="brand-subtitle font-mono text-xs sm:text-sm text-neutral-400 tracking-[0.35em] uppercase mt-2">
+        STORM EDITION // ALL-WEATHER
+      </span>
+    </div>
+
+    <div class="scroll-hint absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container-high/80 backdrop-blur border border-white/10 font-label-sm text-label-sm text-primary uppercase tracking-widest pointer-events-none transition-opacity duration-500 z-10" id="scroll-hint">
+      <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+      <span>SCROLL TO EXPLORE WATERPROOF DYNAMICS</span>
+    </div>
+  </div>
+
+  <!-- SCROLL SPACER (Creates 320vh of smooth scroll travel to scrub the 240 frames) -->
+  <div id="scroll-spacer" class="scroll-spacer"></div>
+
+  <!-- SECTIONS BELOW SCROLL ANIMATION (FROM code.html WITHOUT NAVBAR & HERO) -->
+  <main class="w-full bg-background relative z-20">
+
+    <!-- Section 2: Technical Water-Repellency & Material Specs -->
+    <section class="w-full bg-surface-container-lowest px-margin md:px-margin-md lg:px-margin-lg py-space-xl" id="section-engineering">
+      <div class="max-w-[1440px] mx-auto flex flex-col gap-space-xl">
+        
+        <!-- Section Header with Architectural Spacing -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+          <div class="flex flex-col gap-space-xs">
+            <span class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">SECTION 02 // ARCHITECTURAL DEFENSE</span>
+            <h2 class="font-headline-lg text-headline-lg uppercase text-primary tracking-tight">ENGINEERED FOR THE MONSOON</h2>
+          </div>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+            Every microscopic seam and bonded substrate is certified through dynamic simulated flash-flood chambers at 10,000mm hydrostatic head.
+          </p>
+        </div>
+
+        <!-- 3 Interactive Feature Architecture Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-lg">
+          
+          <!-- Card 1: Hydro-Repel Membrane -->
+          <div class="relative bg-surface-container p-space-lg rounded-xl flex flex-col justify-between overflow-hidden group hover:bg-surface-container-high transition-all">
+            <div class="flex flex-col gap-space-md">
+              <div class="flex items-center justify-between">
+                <span class="font-label-sm text-label-sm px-space-sm py-[2px] rounded bg-surface-container-highest text-primary uppercase">IPX-7 SPEC</span>
+                <span class="material-symbols-outlined text-primary text-[28px]">umbrella</span>
+              </div>
+              <div class="flex flex-col gap-space-xs">
+                <h3 class="font-headline-md text-headline-md uppercase text-primary">Hydro-Repel 10K Membrane</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Integrated sub-dermal breathable membrane featuring nano-coated contact angles that force rain droplets into high-tension spheroids, instantly rolling off before saturation.
+                </p>
+              </div>
+            </div>
+            
+            <!-- Technical Spec Matrix Widget -->
+            <div class="mt-space-lg pt-space-md bg-surface-container-low p-space-sm rounded-lg flex flex-col gap-space-xs">
+              <div class="flex justify-between items-center font-label-sm text-label-sm">
+                <span class="text-on-surface-variant">HYDROSTATIC RESISTANCE</span>
+                <span class="text-primary font-bold">10,000 mm H2O</span>
+              </div>
+              <div class="flex justify-between items-center font-label-sm text-label-sm">
+                <span class="text-on-surface-variant">VAPOR PERMEABILITY (MVTR)</span>
+                <span class="text-primary font-bold">14,500 g/m²/24h</span>
+              </div>
+              <div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden mt-1">
+                <div class="h-full bg-primary w-[94%]"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: GripMatrix Wet Traction Sole -->
+          <div class="relative bg-surface-container p-space-lg rounded-xl flex flex-col justify-between overflow-hidden group hover:bg-surface-container-high transition-all">
+            <div class="flex flex-col gap-space-md">
+              <div class="flex items-center justify-between">
+                <span class="font-label-sm text-label-sm px-space-sm py-[2px] rounded bg-surface-container-highest text-primary uppercase">TERRAIN DECK</span>
+                <span class="material-symbols-outlined text-primary text-[28px]">grain</span>
+              </div>
+              <div class="flex flex-col gap-space-xs">
+                <h3 class="font-headline-md text-headline-md uppercase text-primary">GripMatrix™ Wet Traction Sole</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Micro-siped arctic rubber composite inspired by offshore racing tires. Deep directional aqueduct grooves rapidly evacuate standing water to maintain bone-dry tactile traction.
+                </p>
+              </div>
+            </div>
+            
+            <!-- Technical Spec Matrix Widget -->
+            <div class="mt-space-lg pt-space-md bg-surface-container-low p-space-sm rounded-lg flex flex-col gap-space-xs">
+              <div class="flex justify-between items-center font-label-sm text-label-sm">
+                <span class="text-on-surface-variant">DYNAMIC COEF. ON OIL/WATER</span>
+                <span class="text-primary font-bold">0.94 µ (CRITICAL LEVEL)</span>
+              </div>
+              <div class="flex justify-between items-center font-label-sm text-label-sm">
+                <span class="text-on-surface-variant">SIPING CHANNEL DEPTH</span>
+                <span class="text-primary font-bold">4.2 mm DISPERSION</span>
+              </div>
+              <div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden mt-1">
+                <div class="h-full bg-primary w-[98%]"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Thermal Foam Isolation -->
+          <div class="relative bg-surface-container p-space-lg rounded-xl flex flex-col justify-between overflow-hidden group hover:bg-surface-container-high transition-all">
+            <div class="flex flex-col gap-space-md">
+              <div class="flex items-center justify-between">
+                <span class="font-label-sm text-label-sm px-space-sm py-[2px] rounded bg-surface-container-highest text-primary uppercase">MICRO-CLIMATE</span>
+                <span class="material-symbols-outlined text-primary text-[28px]">thermostat</span>
+              </div>
+              <div class="flex flex-col gap-space-xs">
+                <h3 class="font-headline-md text-headline-md uppercase text-primary">Thermal Foam Isolation</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Closed-cell internal spacer textile that creates a climate-controlled micro-void around the foot. Deflects freezing winter downpours without trapping internal moisture vapor.
+                </p>
+              </div>
+            </div>
+            
+            <!-- Technical Spec Matrix Widget -->
+            <div class="mt-space-lg pt-space-md bg-surface-container-low p-space-sm rounded-lg flex flex-col gap-space-xs">
+              <div class="flex justify-between items-center font-label-sm text-label-sm">
+                <span class="text-on-surface-variant">INTERNAL CORE REGULATION</span>
+                <span class="text-primary font-bold">-5°C TO +32°C OPTIMAL</span>
+              </div>
+              <div class="flex justify-between items-center font-label-sm text-label-sm">
+                <span class="text-on-surface-variant">WATER RETENTION AFTER 4HR</span>
+                <span class="text-primary font-bold">0.02% (NEGLIGIBLE)</span>
+              </div>
+              <div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden mt-1">
+                <div class="h-full bg-primary w-[91%]"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Secondary Photo Matrix Demonstrating Water Resistance -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-lg items-stretch">
+          <div class="bg-surface-container rounded-xl overflow-hidden flex flex-col">
+            <div class="relative w-full h-72 overflow-hidden">
+              <img class="w-full h-full object-cover" alt="Surface Tension Water Beads on Pebbled Leather" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHJPGtM8xt8KpPtMz3APpU70nBffnJgrRuw343ahil_Ft0uSPePhhpVQne_Qs9WFzJyFaspk_lMcFE3z6irJoZQQKz2PeYPEhajSKkoBlIkp0Ct82Q-pbBgilDAVv_S_-1rkrYY84rRrJZ0x_0KYzjZcRQuzE5pD9w3p5BQkMRm4YQ6ONzl3woBPZJqKeCuOdJHNvQEdUS8tK9LtWSTS3qP9KntO3rxVTwjJblSMKSMj7w-l0LusfJ"/>
+              <div class="absolute top-space-md left-space-md px-space-sm py-space-xs bg-surface-container-lowest/80 backdrop-blur rounded font-label-sm text-label-sm uppercase text-primary">
+                SURFACE TENSION VERIFICATION
+              </div>
+            </div>
+            <div class="p-space-lg flex flex-col gap-space-xs flex-1 justify-between bg-surface-container">
+              <h4 class="font-headline-sm text-headline-sm uppercase text-primary">Contact Angle &gt; 145°</h4>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">
+                High-speed camera captures rain impact against the upper leather vamp. Notice the complete lack of moisture soaking or dark staining along the stitch lines.
+              </p>
+              <div class="flex items-center gap-space-md font-label-sm text-label-sm text-primary pt-space-xs">
+                <span>TEST CHAMBER #84</span>
+                <span>PRESSURE: 4.2 BAR</span>
+                <span>RESULT: PASS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-surface-container rounded-xl overflow-hidden flex flex-col">
+            <div class="relative w-full h-72 overflow-hidden">
+              <img class="w-full h-full object-cover" alt="Aqueduct Siping Action Traction" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArxoSr3MVnM6qtu8T1i7-xwbkSGDxOTGNnNOtBFCw3OnoS712VyMHX_D9-tTvDiW8TWmPGc-_oRtYJiHo4x6lBQXkMe1gjyEYdKLwhLDOHjhehu0XWNbW-sE0Lwrh1BuIsdmvh9IUEQEjCvWpBtuztzuWYsW8mz-jR7pJo7E2hBGz7tCVvDpfbg2M5SO4ZwuMMCe3H2xQMzYFvGuSVCpZQCfukQC6Qns1Z_HNByF0g4qkp7dmovEkh"/>
+              <div class="absolute top-space-md left-space-md px-space-sm py-space-xs bg-surface-container-lowest/80 backdrop-blur rounded font-label-sm text-label-sm uppercase text-primary">
+                AQUEDUCT SIPING ACTION
+              </div>
+            </div>
+            <div class="p-space-lg flex flex-col gap-space-xs flex-1 justify-between bg-surface-container">
+              <h4 class="font-headline-sm text-headline-sm uppercase text-primary">Instant Fluid Dispersion Channels</h4>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">
+                Dual-layer vulcanized outsoles actively compress under stride momentum, creating hydraulic suction that evacuates fluid before the sole can hydroplane.
+              </p>
+              <div class="flex items-center gap-space-md font-label-sm text-label-sm text-primary pt-space-xs">
+                <span>SPEED: 22 KM/H RUN</span>
+                <span>SURFACE: GLOSS GRANITE</span>
+                <span>ZERO SLIP DETECTED</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 3: Detail Closeups, Craftsmanship & Commuter Telemetry -->
+    <section class="w-full bg-surface-dim px-margin md:px-margin-md lg:px-margin-lg py-space-xl" id="section-validation">
+      <div class="max-w-[1440px] mx-auto flex flex-col gap-space-xl">
+        
+        <!-- Telemetry Dashboard Header -->
+        <div class="flex flex-col gap-space-xs">
+          <div class="flex items-center gap-space-xs font-label-sm text-label-sm text-primary">
+            <span class="w-2 h-2 bg-primary rounded-full"></span>
+            <span>FIELD VALIDATION REPORT</span>
+          </div>
+          <h2 class="font-headline-lg text-headline-lg uppercase text-primary tracking-tight">METRIC VALIDATION &amp; PILOT REVIEWS</h2>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+            Real-world stress telemetry gathered from 140 urban runners, bike couriers, and architectural explorers across London, Seattle, and Tokyo during autumn storm cycles.
+          </p>
+        </div>
+
+        <!-- Bento Breakdown: Stats + 360 Preview Widget + Verified Pilot Quotes -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-stretch">
+          
+          <!-- Left Bento: Numerical Matrix Telemetry (4 Cols) -->
+          <div class="lg:col-span-4 bg-surface-container p-space-lg rounded-xl flex flex-col justify-between gap-space-lg shadow-xl">
+            <div class="flex flex-col gap-space-md">
+              <span class="font-label-md text-label-md uppercase text-on-surface-variant tracking-wider">INSTRUMENTATION TELEMETRY</span>
+              <div class="flex flex-col gap-space-md">
+                <div class="flex flex-col pb-space-sm bg-surface-container-low p-space-sm rounded-lg">
+                  <span class="font-label-sm text-label-sm text-on-surface-variant uppercase">NET WATER PENETRATION (24H DUNK)</span>
+                  <span class="font-headline-lg text-[36px] text-primary font-bold">0.00%</span>
+                  <span class="font-body-sm text-body-sm text-on-surface-variant">Absolute hermetic barrier verified via ultrasonic probe.</span>
+                </div>
+                <div class="flex flex-col pb-space-sm bg-surface-container-low p-space-sm rounded-lg">
+                  <span class="font-label-sm text-label-sm text-on-surface-variant uppercase">STATIC TACK FRICTION FACTOR</span>
+                  <span class="font-headline-lg text-[36px] text-primary font-bold">0.94 µ</span>
+                  <span class="font-body-sm text-body-sm text-on-surface-variant">Outperforms Vibram standard benchmark by +27%.</span>
+                </div>
+                <div class="flex flex-col pb-space-sm bg-surface-container-low p-space-sm rounded-lg">
+                  <span class="font-label-sm text-label-sm text-on-surface-variant uppercase">REFLECTIVE DISPERSION RANGE</span>
+                  <span class="font-headline-lg text-[36px] text-primary font-bold">250 METERS</span>
+                  <span class="font-body-sm text-body-sm text-on-surface-variant">High-visibility night contour under automotive low beams.</span>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-highest/60 text-on-surface font-label-sm text-label-sm">
+              <span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+              <span>AEGIS TEST PROTOCOL CERT: AP-2025-09</span>
+            </div>
+          </div>
+
+          <!-- Center Bento: Interactive 360 & Dynamic Detail Inspector (5 Cols) -->
+          <div class="lg:col-span-5 bg-surface-container p-space-lg rounded-xl flex flex-col justify-between gap-space-md shadow-xl">
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col">
+                <span class="font-label-sm text-label-sm text-on-surface-variant uppercase">INTERACTIVE SCANNER</span>
+                <span class="font-headline-sm text-headline-sm uppercase text-primary">360° WEATHER SEAL SCAN</span>
+              </div>
+              <div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container-low font-label-sm text-label-sm text-primary">
+                <span class="material-symbols-outlined text-[16px] animate-spin">refresh</span>
+                <span>LIVE RENDER</span>
+              </div>
+            </div>
+
+            <!-- Virtual Product View Container -->
+            <div class="relative w-full aspect-square rounded-lg bg-surface-container-lowest overflow-hidden flex items-center justify-center group cursor-ew-resize select-none" id="scanner-view">
+              <img alt="Detailed Inspection of Aegis Proto-01" class="w-full h-full object-cover transition-all duration-300" id="scan-img" src="ezgif-frame-240.jpg"/>
+              <!-- Scan Grid Overlay -->
+              <div class="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px] opacity-10 pointer-events-none"></div>
+              <!-- Virtual Reticle Center -->
+              <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div class="w-24 h-24 rounded-full border border-primary/20 flex items-center justify-center">
+                  <div class="w-2 h-2 rounded-full bg-primary/60 animate-ping"></div>
+                </div>
+              </div>
+              <!-- Drag Prompt Overlay -->
+              <div class="absolute bottom-space-md left-1/2 -translate-x-1/2 px-space-md py-space-xs rounded-full bg-surface-container-high/90 backdrop-blur font-label-sm text-label-sm text-primary uppercase tracking-widest flex items-center gap-space-xs pointer-events-none">
+                <span class="material-symbols-outlined text-[16px]">drag_pan</span>
+                <span>SELECT ANGLE BELOW</span>
+              </div>
+            </div>
+
+            <!-- Scan Angle Selector Buttons -->
+            <div class="grid grid-cols-4 gap-space-xs">
+              <button class="angle-btn h-9 rounded bg-primary text-on-primary font-label-sm text-label-sm uppercase font-bold" data-frame="240" onclick="selectAngle(this, 'LATERAL')">LATERAL</button>
+              <button class="angle-btn h-9 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm uppercase hover:bg-surface-container-highest transition-colors" data-frame="120" onclick="selectAngle(this, 'OUTSOLE')">OUTSOLE</button>
+              <button class="angle-btn h-9 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm uppercase hover:bg-surface-container-highest transition-colors" data-frame="180" onclick="selectAngle(this, 'HEEL')">HEEL</button>
+              <button class="angle-btn h-9 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm uppercase hover:bg-surface-container-highest transition-colors" data-frame="060" onclick="selectAngle(this, 'TOE BOX')">TOE BOX</button>
+            </div>
+          </div>
+
+          <!-- Right Bento: Pilot & Commuter Quotes (3 Cols) -->
+          <div class="lg:col-span-3 flex flex-col gap-space-sm justify-between">
+            <div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between flex-1 gap-space-sm">
+              <div class="flex flex-col gap-space-xs">
+                <div class="flex items-center gap-1 text-primary">
+                  <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface italic leading-snug">
+                  "Rode 8 hours through torrential rain on a fixed gear in Seattle. My socks were bone dry at the end of the shift. The grip on wet streetcar tracks is genuinely unbelievable."
+                </p>
+              </div>
+              <div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant pt-space-xs">
+                <span class="text-primary uppercase font-bold">K. VANCE</span>
+                <span>SEATTLE, WA // COURIER</span>
+              </div>
+            </div>
+
+            <div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between flex-1 gap-space-sm">
+              <div class="flex flex-col gap-space-xs">
+                <div class="flex items-center gap-1 text-primary">
+                  <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface italic leading-snug">
+                  "The pebbled leather texture under streetlamps looks phenomenal. It completely rejects water beads like liquid mercury. This is the new gold standard for technical streetwear."
+                </p>
+              </div>
+              <div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant pt-space-xs">
+                <span class="text-primary uppercase font-bold">T. NAKAMURA</span>
+                <span>TOKYO, JP // ARCHITECT</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Sizing & Fit Calibration Matrix -->
+    <section class="w-full bg-surface-container-lowest px-margin md:px-margin-md lg:px-margin-lg py-space-xl" id="fit-matrix">
+      <div class="max-w-[1440px] mx-auto flex flex-col gap-space-lg">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+          <div class="flex flex-col gap-space-xs">
+            <span class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">PRECISION CALIBRATION</span>
+            <h2 class="font-headline-lg text-headline-lg uppercase text-primary tracking-tight">MONSOON FIT ARCHITECTURE</h2>
+          </div>
+          <div class="flex items-center gap-space-xs font-label-sm text-label-sm text-primary bg-surface-container px-space-md py-space-xs rounded-lg">
+            <span class="material-symbols-outlined text-[18px]">straighten</span>
+            <span>CALIBRATED FOR HEAVY TECHNICAL SOCKS</span>
+          </div>
+        </div>
+
+        <!-- Fit Guide Table -->
+        <div class="w-full overflow-x-auto rounded-xl bg-surface-container">
+          <table class="w-full text-left font-label-md text-label-md">
+            <thead>
+              <tr class="bg-surface-container-high text-primary uppercase font-bold">
+                <th class="p-space-md">US MEN</th>
+                <th class="p-space-md">UK</th>
+                <th class="p-space-md">EU</th>
+                <th class="p-space-md">FOOT LENGTH (MM)</th>
+                <th class="p-space-md">FIT PROFILE</th>
+                <th class="p-space-md">STOCK DISPATCH STATUS</th>
+              </tr>
+            </thead>
+            <tbody class="text-on-surface divide-y-0">
+              <tr class="hover:bg-surface-container-high/50 transition-colors">
+                <td class="p-space-md font-bold text-primary">US 7.0</td>
+                <td class="p-space-md text-on-surface-variant">6.0</td>
+                <td class="p-space-md text-on-surface-variant">40.0</td>
+                <td class="p-space-md text-on-surface-variant">250 mm</td>
+                <td class="p-space-md">True to Size</td>
+                <td class="p-space-md text-primary font-bold">READY TO SHIP</td>
+              </tr>
+              <tr class="hover:bg-surface-container-high/50 transition-colors">
+                <td class="p-space-md font-bold text-primary">US 8.0</td>
+                <td class="p-space-md text-on-surface-variant">7.0</td>
+                <td class="p-space-md text-on-surface-variant">41.0</td>
+                <td class="p-space-md text-on-surface-variant">260 mm</td>
+                <td class="p-space-md">True to Size</td>
+                <td class="p-space-md text-primary font-bold">READY TO SHIP</td>
+              </tr>
+              <tr class="bg-surface-container-high/40 hover:bg-surface-container-high transition-colors">
+                <td class="p-space-md font-bold text-primary">US 9.5 (SAMPLE FOCUS)</td>
+                <td class="p-space-md text-on-surface-variant">8.5</td>
+                <td class="p-space-md text-on-surface-variant">43.0</td>
+                <td class="p-space-md text-on-surface-variant">275 mm</td>
+                <td class="p-space-md text-primary font-bold">True to Size / Arch Lock</td>
+                <td class="p-space-md text-primary font-bold">LAST 42 UNITS</td>
+              </tr>
+              <tr class="hover:bg-surface-container-high/50 transition-colors">
+                <td class="p-space-md font-bold text-primary">US 10.5</td>
+                <td class="p-space-md text-on-surface-variant">9.5</td>
+                <td class="p-space-md text-on-surface-variant">44.5</td>
+                <td class="p-space-md text-on-surface-variant">285 mm</td>
+                <td class="p-space-md">True to Size</td>
+                <td class="p-space-md text-primary font-bold">READY TO SHIP</td>
+              </tr>
+              <tr class="hover:bg-surface-container-high/50 transition-colors">
+                <td class="p-space-md font-bold text-primary">US 12.0</td>
+                <td class="p-space-md text-on-surface-variant">11.0</td>
+                <td class="p-space-md text-on-surface-variant">46.0</td>
+                <td class="p-space-md text-on-surface-variant">300 mm</td>
+                <td class="p-space-md">True to Size</td>
+                <td class="p-space-md text-primary font-bold">LOW STOCK (9 UNITS)</td>
+              </tr>
+              <tr class="hover:bg-surface-container-high/50 transition-colors opacity-40">
+                <td class="p-space-md font-bold line-through">US 13.0</td>
+                <td class="p-space-md">12.0</td>
+                <td class="p-space-md">47.5</td>
+                <td class="p-space-md">310 mm</td>
+                <td class="p-space-md">True to Size</td>
+                <td class="p-space-md text-outline font-bold">DEPLETED (JOIN WAITLIST)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Product Summary & Retailer Details -->
+    <section class="w-full bg-surface-container px-margin md:px-margin-md lg:px-margin-lg py-space-xl" id="retailer-section">
+      <div class="max-w-[1440px] mx-auto rounded-2xl bg-surface-container-low p-space-lg md:p-space-xl shadow-2xl relative overflow-hidden border border-white/5">
+        
+        <!-- Ambient Backlight -->
+        <div class="absolute -right-20 -bottom-20 w-96 h-96 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+
+        <!-- Section Header -->
+        <div class="flex flex-col gap-space-xs mb-space-lg">
+          <div class="flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase">
+            <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            <span>VERIFIED DISTRIBUTION // REGIONAL ALLOCATION NODE</span>
+          </div>
+          <h2 class="font-headline-lg text-headline-lg uppercase text-primary tracking-tight leading-tight">
+            PRODUCT SUMMARY &amp; RETAILER DETAILS
+          </h2>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+            Official technical footwear summary and authorized student distribution network managed in Jaipur, Rajasthan.
+          </p>
+        </div>
+
+        <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+          
+          <!-- Left Column: Product Summary & Architectural Specs (7 Cols) -->
+          <div class="lg:col-span-7 flex flex-col gap-space-md">
+            
+            <div class="bg-surface-container p-space-lg rounded-xl flex flex-col gap-space-md shadow-xl border border-white/5">
+              <div class="flex flex-col gap-space-xs border-b border-white/5 pb-space-md">
+                <div class="flex items-center justify-between">
+                  <span class="font-label-sm text-label-sm px-space-sm py-[2px] rounded bg-surface-container-highest text-primary uppercase font-bold">SPECIFICATION MATRIX</span>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant">SERIES: PROTO-01</span>
+                </div>
+                <h3 class="font-headline-md text-headline-md uppercase text-primary font-bold">
+                  COMET // STORM EDITION HYDRO-STEALTH
+                </h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Engineered with hydrophobic full-grain pebbled leather, dual-density CloudVapor™ midsole shock absorption, and GripMatrix™ micro-siped vulcanized tread for zero moisture penetration in extreme monsoon downpours.
+                </p>
+              </div>
+
+              <!-- Technical Specs Grid -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+                
+                <div class="flex flex-col p-space-sm rounded-lg bg-surface-container-low border border-white/5">
+                  <span class="font-label-sm text-label-sm text-on-surface-variant uppercase">WATERPROOF CERTIFICATION</span>
+                  <span class="font-headline-sm text-[16px] text-primary font-bold mt-1">IPX-8 / 10,000mm H2O</span>
+                  <span class="font-body-sm text-[12px] text-on-surface-variant">Zero moisture ingress under high pressure</span>
+                </div>
+
+                <div class="flex flex-col p-space-sm rounded-lg bg-surface-container-low border border-white/5">
+                  <span class="font-label-sm text-label-sm text-on-surface-variant uppercase">OUTSOLE TRACTION DECK</span>
+                  <span class="font-headline-sm text-[16px] text-primary font-bold mt-1">GripMatrix™ Vulcanized Arctic Rubber</span>
+                  <span class="font-body-sm text-[12px] text-on-surface-variant">0.94μ dynamic friction coefficient</span>
+                </div>
+
+                <div class="flex flex-col p-space-sm rounded-lg bg-surface-container-low border border-white/5">
+                  <span class="font-label-sm text-label-sm text-on-surface-variant uppercase">MIDSOLE KINETIC RECOIL</span>
+                  <span class="font-headline-sm text-[16px] text-primary font-bold mt-1">CloudVapor™ Nitrogen Infused</span>
+                  <span class="font-body-sm text-[12px] text-on-surface-variant">-45% impact shock attenuation</span>
+                </div>
+
+                <div class="flex flex-col p-space-sm rounded-lg bg-surface-container-low border border-white/5">
+                  <span class="font-label-sm text-label-sm text-on-surface-variant uppercase">CHASSIS MASS &amp; GEOMETRY</span>
+                  <span class="font-headline-sm text-[16px] text-primary font-bold mt-1">278g Ultralight // 8.0mm Drop</span>
+                  <span class="font-body-sm text-[12px] text-on-surface-variant">32mm heel stack / 24mm forefoot</span>
+                </div>
+
+                <div class="flex flex-col p-space-sm rounded-lg bg-surface-container-low border border-white/5">
+                  <span class="font-label-sm text-label-sm text-on-surface-variant uppercase">UPPER MATERIAL</span>
+                  <span class="font-headline-sm text-[16px] text-primary font-bold mt-1">Pebbled Cowhide + Nano-Shield</span>
+                  <span class="font-body-sm text-[12px] text-on-surface-variant">Extreme contact angle &gt; 145° beading</span>
+                </div>
+
+                <div class="flex flex-col p-space-sm rounded-lg bg-surface-container-low border border-white/5">
+                  <span class="font-label-sm text-label-sm text-on-surface-variant uppercase">NIGHT TELEMETRY</span>
+                  <span class="font-headline-sm text-[16px] text-primary font-bold mt-1">3M Luminescent Star Emblem</span>
+                  <span class="font-body-sm text-[12px] text-on-surface-variant">250m reflective visibility</span>
+                </div>
+
+              </div>
+
+              <!-- Price & Guarantee Strip -->
+              <div class="flex flex-wrap items-center justify-between gap-space-sm p-space-md rounded-lg bg-surface-container-lowest border border-white/5">
+                <div class="flex items-baseline gap-space-xs">
+                  <span class="font-headline-md text-headline-md font-bold text-primary">$220 USD</span>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant">/ ₹18,499 INR (NET VAT INCL.)</span>
+                </div>
+                <div class="flex items-center gap-space-xs font-label-sm text-label-sm text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                  <span>AUTHENTIC BATCH 001 GUARANTEED</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Right Column: Retailer Details (Aashutosh Soni, Arya College Jaipur) (5 Cols) -->
+          <div class="lg:col-span-5 flex flex-col gap-space-md">
+            
+            <div class="bg-surface-container p-space-lg rounded-xl shadow-xl flex flex-col gap-space-md border border-white/10">
+              
+              <!-- Retailer Header & Verification Badge -->
+              <div class="flex items-center justify-between border-b border-white/5 pb-space-sm">
+                <span class="font-label-md text-label-md uppercase text-on-surface-variant font-bold">AUTHORIZED RETAILER</span>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-emerald-950/70 text-emerald-400 font-label-sm text-label-sm border border-emerald-500/30 font-bold">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+                  VERIFIED PARTNER
+                </span>
+              </div>
+
+              <!-- Retailer Profile Card -->
+              <div class="flex flex-col gap-space-sm bg-surface-container-lowest p-space-md rounded-xl border border-white/5">
+                <div class="flex items-center gap-space-md">
+                  <div class="w-14 h-14 rounded-full bg-surface-container-high border-2 border-primary/30 flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[28px] text-primary">person</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <h4 class="font-headline-md text-headline-md uppercase text-primary font-bold tracking-tight">
+                      AASHUTOSH SONI
+                    </h4>
+                    <span class="font-label-sm text-label-sm text-primary/80 font-bold tracking-wide">
+                      2ND YEAR STUDENT // ARYA COLLEGE
+                    </span>
+                    <span class="font-label-sm text-[11px] text-on-surface-variant uppercase mt-0.5">
+                      JAIPUR, RAJASTHAN, INDIA
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Academic & Regional Badges -->
+                <div class="grid grid-cols-2 gap-space-xs pt-space-xs border-t border-white/5">
+                  <div class="flex flex-col p-2 rounded bg-surface-container-low">
+                    <span class="font-label-sm text-[10px] text-on-surface-variant uppercase">INSTITUTION</span>
+                    <span class="font-label-sm text-label-sm text-primary font-bold">Arya College, Jaipur</span>
+                  </div>
+                  <div class="flex flex-col p-2 rounded bg-surface-container-low">
+                    <span class="font-label-sm text-[10px] text-on-surface-variant uppercase">ACADEMIC STATUS</span>
+                    <span class="font-label-sm text-label-sm text-primary font-bold">2nd Year Engineering</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Distribution & Hub Details -->
+              <div class="flex flex-col gap-space-xs font-label-sm text-label-sm text-on-surface-variant bg-surface-container-lowest p-space-sm rounded-lg border border-white/5">
+                <div class="flex justify-between text-on-surface">
+                  <span>REGIONAL LOGISTICS HUB:</span>
+                  <span class="text-primary font-bold uppercase">JAIPUR FULFILLMENT CELL</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>CAMPUS RETAIL STATUS:</span>
+                  <span class="text-emerald-400 font-bold uppercase">OFFICIAL CAMPUS DISTRIBUTOR</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>DISPATCH TIMELINE:</span>
+                  <span class="text-primary font-bold">WITHIN 24 HOURS (JAIPUR / PAN-INDIA)</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>AUTHENTICITY ID:</span>
+                  <span class="font-mono text-primary font-bold">AUTH-ARYA-JPR-2026-SONI</span>
+                </div>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="flex flex-col gap-space-xs pt-space-xs">
+                <a href="#order-now-section" class="w-full h-14 bg-primary text-black font-headline-sm text-headline-sm uppercase tracking-wider rounded-lg shadow-xl hover:bg-neutral-200 active:translate-y-0.5 transition-all flex items-center justify-center gap-space-sm cursor-pointer no-underline font-bold" id="retailer-order-btn">
+                  <span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+                  <span id="retailer-btn-text">ORDER VIA RETAILER — AASHUTOSH SONI</span>
+                </a>
+
+                <a href="#order-now-section" class="w-full h-11 bg-surface-container-high text-primary font-label-md text-label-md uppercase tracking-wider rounded-lg hover:bg-surface-container-highest transition-colors flex items-center justify-center gap-space-sm cursor-pointer border border-white/5 no-underline">
+                  <span class="material-symbols-outlined text-[18px]">verified</span>
+                  <span>VIEW ORDER DESK &amp; ALLOCATION (JAIPUR)</span>
+                </a>
+              </div>
+
+              <p class="font-label-sm text-[11px] text-center text-on-surface-variant">
+                🔒 Verified Arya College Student Entrepreneur · 100% Genuine COMET Allocation · Secure Direct Fulfillment
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- SECTION 06: ORDER NOW // DIRECT ALLOCATION TERMINAL (AT LAST)           -->
+    <!-- ======================================================================= -->
+    <section id="order-now-section" class="w-full bg-surface-container-lowest border-t border-white/10 py-space-xl relative z-20">
+      <div class="max-w-[1440px] mx-auto px-margin md:px-margin-md lg:px-margin-lg flex flex-col gap-space-lg">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col gap-space-xs">
+          <div class="flex items-center gap-2 text-emerald-400 font-mono text-xs tracking-widest uppercase font-bold">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>06 // DIRECT DISPATCH &amp; ALLOCATION DESK</span>
+          </div>
+          <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4">
+            <div>
+              <h2 class="font-headline-lg text-3xl sm:text-4xl lg:text-5xl uppercase text-white font-black tracking-tight">
+                ORDER COMET STORM EDITION
+              </h2>
+              <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mt-1">
+                Official batch fulfillment supervised by authorized student retailer <strong class="text-white">Aashutosh Soni</strong>, 2nd-year student at <strong class="text-white">Arya College, Jaipur</strong>. Guaranteed authentic allocation with same-day regional dispatch.
+              </p>
+            </div>
+            <div class="flex items-center gap-3 bg-surface-container px-4 py-2.5 rounded-xl border border-white/10 shrink-0">
+              <span class="material-symbols-outlined text-primary text-[22px]">verified</span>
+              <div class="flex flex-col">
+                <span class="font-label-sm text-[10px] text-on-surface-variant uppercase">Jaipur Retail Desk</span>
+                <span class="font-mono text-xs text-emerald-400 font-bold uppercase">Aashutosh Soni · Active</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2-Column Checkout Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+          
+          <!-- Left Column: Product Summary, Specs & Retailer Verification (5 cols) -->
+          <div class="lg:col-span-5 flex flex-col gap-space-md">
+            
+            <!-- Sneaker Card with Price -->
+            <div class="bg-surface-container p-space-lg rounded-2xl border border-white/10 flex flex-col gap-space-md shadow-xl">
+              <div class="flex items-center justify-between pb-3 border-b border-white/5">
+                <span class="font-label-md text-xs uppercase text-on-surface-variant font-bold">ORDER SUMMARY</span>
+                <span class="font-mono text-xs text-primary font-bold">BATCH 001 // STORM SPEC</span>
+              </div>
+
+              <!-- Product Preview Image -->
+              <div class="relative w-full aspect-[16/10] bg-surface-container-lowest rounded-xl overflow-hidden border border-white/5 flex items-center justify-center p-3">
+                <img id="order-preview-img" src="ezgif-frame-240.jpg" alt="COMET Storm Edition" class="w-full h-full object-contain filter drop-shadow-[0_12px_24px_rgba(0,0,0,0.9)] transition-all duration-300"/>
+                <div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-black/80 backdrop-blur text-[10px] font-mono text-emerald-400 border border-emerald-500/30 flex items-center gap-1 font-bold">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+                  AUTHENTIC COMET
+                </div>
+                <div class="absolute bottom-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur text-[11px] font-mono text-white/90 border border-white/10">
+                  IPX-7 WATERPROOF
+                </div>
+              </div>
+
+              <!-- Price Box -->
+              <div class="flex items-center justify-between p-4 rounded-xl bg-surface-container-lowest border border-white/10">
+                <div class="flex flex-col">
+                  <span class="text-[11px] font-mono uppercase text-on-surface-variant">Total Investment (All Incl.)</span>
+                  <div class="flex items-baseline gap-2 mt-0.5">
+                    <span id="order-price-display-usd" class="font-headline-md text-2xl font-bold text-primary">$220 USD</span>
+                    <span id="order-price-display-inr" class="font-mono text-sm text-neutral-300">/ ₹18,499 INR</span>
+                  </div>
+                </div>
+                <div class="text-right flex flex-col items-end">
+                  <span class="inline-flex items-center gap-1 text-[11px] font-mono text-emerald-400 font-bold">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Allocation Open
+                  </span>
+                  <span class="text-[10px] font-mono text-neutral-400 mt-0.5">14 Pairs Jaipur Hub</span>
+                </div>
+              </div>
+
+              <!-- Technical Specifications Grid -->
+              <div class="grid grid-cols-2 gap-2 text-xs font-mono">
+                <div class="p-2.5 rounded-lg bg-surface-container-lowest border border-white/5 flex flex-col">
+                  <span class="text-[10px] text-neutral-400 uppercase">Waterproof Rating</span>
+                  <span class="text-white font-bold mt-0.5">IPX-7 Submersible</span>
+                </div>
+                <div class="p-2.5 rounded-lg bg-surface-container-lowest border border-white/5 flex flex-col">
+                  <span class="text-[10px] text-neutral-400 uppercase">Outsole Traction</span>
+                  <span class="text-white font-bold mt-0.5">Vibram Arctic Grip</span>
+                </div>
+                <div class="p-2.5 rounded-lg bg-surface-container-lowest border border-white/5 flex flex-col">
+                  <span class="text-[10px] text-neutral-400 uppercase">Chassis Armor</span>
+                  <span class="text-white font-bold mt-0.5">Carbon Weave Matrix</span>
+                </div>
+                <div class="p-2.5 rounded-lg bg-surface-container-lowest border border-white/5 flex flex-col">
+                  <span class="text-[10px] text-neutral-400 uppercase">Weight / Unit</span>
+                  <span class="text-white font-bold mt-0.5">342g Hyper-Light</span>
+                </div>
+              </div>
+
+              <!-- Retailer Trust Block -->
+              <div class="flex flex-col gap-2 p-3.5 rounded-xl bg-surface-container-lowest border border-white/10 text-xs font-mono">
+                <div class="flex items-center gap-2 text-white font-bold">
+                  <span class="material-symbols-outlined text-primary text-[18px]">school</span>
+                  <span>Retailer: Aashutosh Soni</span>
+                </div>
+                <div class="text-[11px] text-on-surface-variant space-y-1">
+                  <p>• <strong>Campus:</strong> Arya College of Engineering, Jaipur (2nd Year)</p>
+                  <p>• <strong>Fulfillment:</strong> Direct Jaipur Handover / Free Express Courier Pan-India</p>
+                  <p>• <strong>Warranty:</strong> 2-Year Official Aegis Waterproof Protection + 7-Day Fit Guarantee</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Interactive Order Now Checkout Form (7 cols) -->
+          <div class="lg:col-span-7">
+            <div class="bg-surface-container p-space-lg md:p-space-xl rounded-2xl border border-white/15 shadow-2xl flex flex-col gap-space-md relative overflow-hidden">
+              
+              <!-- Subtle Header -->
+              <div class="flex items-center justify-between border-b border-white/10 pb-4">
+                <div class="flex items-center gap-2.5">
+                  <div class="w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-primary">
+                    <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                  </div>
+                  <div>
+                    <h3 class="font-headline-sm text-lg sm:text-xl text-white font-bold uppercase tracking-tight">
+                      INSTANT ORDER CHECKOUT
+                    </h3>
+                    <p class="text-[11px] font-mono text-neutral-400">Processed directly via Aashutosh Soni (Jaipur Hub)</p>
+                  </div>
+                </div>
+                <span class="text-[10px] font-mono text-emerald-400 bg-emerald-950/80 px-2.5 py-1 rounded border border-emerald-500/30 font-bold uppercase">
+                  ACTIVE TERMINAL
+                </span>
+              </div>
+
+              <!-- Checkout Form -->
+              <form id="checkout-order-form" class="flex flex-col gap-4">
+                
+                <!-- 1. Colorway Selector -->
+                <div class="flex flex-col gap-1.5">
+                  <label class="font-mono text-xs uppercase text-neutral-300 font-bold flex justify-between">
+                    <span>1. Select Colorway</span>
+                    <span id="selected-color-label" class="text-primary font-normal">Onyx Cyber-Black (Selected)</span>
+                  </label>
+                  <div class="grid grid-cols-2 gap-3" id="colorway-buttons">
+                    <button type="button" class="color-btn active flex items-center gap-3 p-3 rounded-lg bg-surface-container-lowest border-2 border-primary text-white text-xs font-mono font-bold cursor-pointer transition-all" data-color="Onyx Cyber-Black" data-frame="240">
+                      <span class="w-4 h-4 rounded-full bg-neutral-950 border border-white/40 shrink-0"></span>
+                      <div class="flex flex-col text-left">
+                        <span>Onyx Cyber-Black</span>
+                        <span class="text-[10px] text-neutral-400 font-normal">Triple Black DWR</span>
+                      </div>
+                    </button>
+                    <button type="button" class="color-btn flex items-center gap-3 p-3 rounded-lg bg-surface-container-lowest border border-white/10 text-neutral-300 hover:border-white/30 text-xs font-mono font-bold cursor-pointer transition-all" data-color="Storm Mist Silver" data-frame="120">
+                      <span class="w-4 h-4 rounded-full bg-slate-300 border border-black/40 shrink-0"></span>
+                      <div class="flex flex-col text-left">
+                        <span>Storm Mist Silver</span>
+                        <span class="text-[10px] text-neutral-400 font-normal">Reflective Carbon</span>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- 2. Size Selector (US Men) -->
+                <div class="flex flex-col gap-1.5">
+                  <label class="font-mono text-xs uppercase text-neutral-300 font-bold flex justify-between">
+                    <span>2. Select Size (US Men)</span>
+                    <span id="selected-size-label" class="text-primary font-normal">US 9.5 (Standard Fit)</span>
+                  </label>
+                  <div class="grid grid-cols-5 sm:grid-cols-10 gap-1.5" id="checkout-size-buttons">
+                    <button type="button" class="checkout-size-btn py-2.5 rounded bg-surface-container-lowest border border-white/10 text-xs font-mono font-bold text-white hover:border-white/30 transition-all cursor-pointer" data-size="US 7.0">7.0</button>
+                    <button type="button" class="checkout-size-btn py-2.5 rounded bg-surface-container-lowest border border-white/10 text-xs font-mono font-bold text-white hover:border-white/30 transition-all cursor-pointer" data-size="US 7.5">7.5</button>
+                    <button type="button" class="checkout-size-btn py-2.5 rounded bg-surface-container-lowest border border-white/10 text-xs font-mono font-bold text-white hover:border-white/30 transition-all cursor-pointer" data-size="US 8.0">8.0</button>
+                    <button type="button" class="checkout-size-btn py-2.5 rounded bg-surface-container-lowest border border-white/10 text-xs font-mono font-bold text-white hover:border-white/30 transition-all cursor-pointer" data-size="US 8.5">8.5</button>
+                    <button type="button" class="checkout-size-btn py-2.5 rounded bg-surface-container-lowest border border-white/10 text-xs font-mono font-bold text-white hover:border-white/30 transition-all cursor-pointer" data-size="US 9.0">9.0</button>
+                    <button type="button" class="checkout-size-btn active py-2.5 rounded bg-primary text-black border border-primary text-xs font-mono font-bold transition-all cursor-pointer" data-size="US 9.5">9.5</button>
+                    <button type="button" class="checkout-size-btn py-2.5 rounded bg-surface-container-lowest border border-white/10 text-xs font-mono font-bold text-white hover:border-white/30 transition-all cursor-pointer" data-size="US 10.0">10.0</button>
+                    <button type="button" class="checkout-size-btn py-2.5 rounded bg-surface-container-lowest border border-white/10 text-xs font-mono font-bold text-white hover:border-white/30 transition-all cursor-pointer" data-size="US 10.5">10.5</button>
+                    <button type="button" class="checkout-size-btn py-2.5 rounded bg-surface-container-lowest border border-white/10 text-xs font-mono font-bold text-white hover:border-white/30 transition-all cursor-pointer" data-size="US 11.0">11.0</button>
+                    <button type="button" class="checkout-size-btn py-2.5 rounded bg-surface-container-lowest border border-white/10 text-xs font-mono font-bold text-white hover:border-white/30 transition-all cursor-pointer" data-size="US 12.0">12.0</button>
+                  </div>
+                </div>
+
+                <!-- 3. Quantity & Pricing Row -->
+                <div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-lowest border border-white/5">
+                  <div class="flex items-center gap-3">
+                    <span class="font-mono text-xs uppercase text-neutral-300 font-bold">Quantity:</span>
+                    <div class="flex items-center gap-2 bg-surface-container-low px-2 py-1 rounded border border-white/10">
+                      <button type="button" id="qty-minus" class="w-6 h-6 flex items-center justify-center text-white hover:bg-white/10 rounded cursor-pointer font-mono font-bold">-</button>
+                      <span id="qty-count" class="font-mono text-xs font-bold text-white px-2">1</span>
+                      <button type="button" id="qty-plus" class="w-6 h-6 flex items-center justify-center text-white hover:bg-white/10 rounded cursor-pointer font-mono font-bold">+</button>
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <span class="text-[10px] font-mono text-neutral-400 block uppercase">Subtotal</span>
+                    <span id="form-subtotal" class="font-mono text-sm text-primary font-bold">$220 / ₹18,499</span>
+                  </div>
+                </div>
+
+                <!-- 4. Customer Name & WhatsApp Phone -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div class="flex flex-col gap-1">
+                    <label class="font-mono text-xs uppercase text-neutral-300 font-bold" for="order-cust-name">Your Full Name *</label>
+                    <input id="order-cust-name" required type="text" placeholder="e.g. Rahul Sharma" class="h-11 px-3.5 rounded-lg bg-surface-container-lowest border border-white/15 text-white text-xs font-mono focus:outline-none focus:border-primary transition-colors"/>
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <label class="font-mono text-xs uppercase text-neutral-300 font-bold" for="order-cust-phone">WhatsApp / Contact Phone *</label>
+                    <input id="order-cust-phone" required type="tel" placeholder="+91 98765 43210" class="h-11 px-3.5 rounded-lg bg-surface-container-lowest border border-white/15 text-white text-xs font-mono focus:outline-none focus:border-primary transition-colors"/>
+                  </div>
+                </div>
+
+                <!-- 5. Delivery Address / Campus -->
+                <div class="flex flex-col gap-1">
+                  <label class="font-mono text-xs uppercase text-neutral-300 font-bold" for="order-cust-address">Delivery Address / Arya College Campus / Hostel *</label>
+                  <input id="order-cust-address" required type="text" placeholder="Room/Hostel No., Arya College Campus or Street, Jaipur / City" class="h-11 px-3.5 rounded-lg bg-surface-container-lowest border border-white/15 text-white text-xs font-mono focus:outline-none focus:border-primary transition-colors"/>
+                </div>
+
+                <!-- 6. Payment Preference -->
+                <div class="flex flex-col gap-1.5">
+                  <label class="font-mono text-xs uppercase text-neutral-300 font-bold">Select Preferred Payment Mode</label>
+                  <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                    <label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-lowest border border-white/10 hover:border-white/30 cursor-pointer font-mono text-[11px] text-neutral-200">
+                      <input type="radio" name="checkout-paymode" value="UPI / QR Code" checked class="accent-primary"/>
+                      <span>UPI (GPay / PhonePe)</span>
+                    </label>
+                    <label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-lowest border border-white/10 hover:border-white/30 cursor-pointer font-mono text-[11px] text-neutral-200">
+                      <input type="radio" name="checkout-paymode" value="Cash on Delivery" class="accent-primary"/>
+                      <span>Cash on Delivery</span>
+                    </label>
+                    <label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-lowest border border-white/10 hover:border-white/30 cursor-pointer font-mono text-[11px] text-neutral-200">
+                      <input type="radio" name="checkout-paymode" value="Arya Campus Handover" class="accent-primary"/>
+                      <span>Arya Campus Handover</span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- 7. Action Button -->
+                <button type="submit" id="checkout-submit-btn" class="w-full h-14 rounded-lg bg-primary text-black font-mono font-bold text-sm uppercase tracking-wider hover:bg-neutral-200 active:translate-y-0.5 transition-all shadow-xl flex items-center justify-center gap-2.5 cursor-pointer mt-2">
+                  <span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+                  <span>CONFIRM &amp; PLACE ORDER NOW — VIA AASHUTOSH SONI</span>
+                </button>
+
+                <p class="font-mono text-[11px] text-center text-neutral-400">
+                  🔒 Verified Arya College Student Partner · 100% Genuine COMET Guarantee · Direct WhatsApp updates
+                </p>
+
+              </form>
+
+              <!-- Order Success Confirmation Card (Initially Hidden) -->
+              <div id="checkout-confirmation-card" class="hidden flex-col items-center text-center gap-4 py-8 bg-surface-container-lowest rounded-xl border border-emerald-500/40 p-6">
+                <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[36px]">check_circle</span>
+                </div>
+                
+                <div class="flex flex-col gap-1">
+                  <span class="font-mono text-xs uppercase text-emerald-400 font-bold tracking-widest">ORDER SECURED &amp; DISPATCHED TO JAIPUR HUB</span>
+                  <h4 class="font-headline-md text-2xl font-bold text-white uppercase">ORDER CONFIRMED!</h4>
+                </div>
+
+                <div class="p-3 bg-surface-container rounded-lg border border-white/10 font-mono text-sm text-emerald-400 font-bold">
+                  OFFICIAL TICKET: <span id="confirmed-ticket-num">#CMT-JPR-7491</span>
+                </div>
+
+                <p class="font-body-sm text-neutral-300 max-w-md text-xs sm:text-sm leading-relaxed">
+                  Thank you, <strong id="confirmed-name-text" class="text-white">Customer</strong>! Your order for <strong id="confirmed-item-text" class="text-white">COMET Storm Edition (Onyx Cyber-Black, US 9.5)</strong> has been registered with retailer <strong class="text-white">Aashutosh Soni</strong> (Arya College, Jaipur).
+                </p>
+
+                <div class="w-full max-w-md p-3 rounded-lg bg-surface-container-low border border-white/5 text-left font-mono text-[11px] text-neutral-300 space-y-1">
+                  <div class="flex justify-between">
+                    <span class="text-neutral-400">Fulfillment Hub:</span>
+                    <span class="text-white font-bold">Arya College, Jaipur Hub</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-neutral-400">Retailer Contact:</span>
+                    <span class="text-white font-bold">Aashutosh Soni (2nd Year)</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-neutral-400">Delivery Address:</span>
+                    <span id="confirmed-addr-text" class="text-white font-bold">Campus / Jaipur</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-neutral-400">Payment Preference:</span>
+                    <span id="confirmed-pay-text" class="text-emerald-400 font-bold">UPI / QR Code</span>
+                  </div>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
+                  <a id="confirmed-whatsapp-btn" href="https://wa.me/919876543210" target="_blank" class="px-5 py-3 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono text-xs font-bold uppercase tracking-wider flex items-center gap-2 transition-all no-underline shadow-lg">
+                    <span class="material-symbols-outlined text-[18px]">chat</span>
+                    <span>CONFIRM ON WHATSAPP WITH AASHUTOSH</span>
+                  </a>
+                  <button type="button" id="confirmed-new-order-btn" class="px-4 py-3 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-white font-mono text-xs uppercase tracking-wider transition-all cursor-pointer">
+                    Place Another Order
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-surface-container-lowest relative z-20">
+    <div class="max-w-[1440px] mx-auto px-margin md:px-margin-md lg:px-margin-lg pt-space-xl pb-space-lg flex flex-col gap-space-xl">
+      <div class="flex flex-wrap items-center justify-between gap-space-md pb-space-lg bg-surface-container-lowest border-b border-white/5">
+        <div class="flex flex-wrap items-center gap-space-sm">
+          <div class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+            <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+            <span>WATERPROOF IPX-7</span>
+          </div>
+          <div class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+            <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+            <span>VIBRAM ARCTIC GRIP</span>
+          </div>
+          <div class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+            <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+            <span>CARBON WEAVE MATRIX</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-space-md text-on-surface-variant font-label-sm text-label-sm">
+          <span>TELEMETRY: LIVE</span>
+          <span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-space-xl">
+        <div class="md:col-span-5 flex flex-col gap-space-sm">
+          <span class="font-headline-sm text-headline-sm uppercase text-primary">STORM PROTOCOL DISPATCH</span>
+          <p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">
+            Receive technical documentation, release timestamps, and weather telemetry updates directly to your terminal.
+          </p>
+        </div>
+        <div class="md:col-span-7 flex flex-col justify-center">
+          <form class="flex flex-col sm:flex-row items-stretch gap-space-xs" id="dispatch-form" onsubmit="event.preventDefault(); document.getElementById('auth-btn').innerText = 'AUTHORIZED // CONNECTED';">
+            <div class="relative flex-1">
+              <input class="w-full h-11 px-space-md bg-surface-container text-on-surface placeholder:text-on-surface-variant/50 font-label-md text-label-md rounded-lg focus:outline-none focus:ring-1 focus:ring-primary" placeholder="ENTER OPERATOR EMAIL" required="" type="email"/>
+            </div>
+            <button class="h-11 px-space-lg bg-surface-container-high text-primary font-label-md text-label-md uppercase tracking-wider rounded-lg hover:bg-primary hover:text-on-primary transition-colors shrink-0 cursor-pointer" id="auth-btn" type="submit">
+              AUTHORIZE ACCESS
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-md font-label-sm text-label-sm text-on-surface-variant border-t border-white/5">
+        <div class="flex items-center gap-space-sm">
+          <span>© 2026 AEGIS FOOTWEAR LABS. ALL SPECIFICATIONS RESERVED.</span>
+        </div>
+        <div class="flex items-center gap-space-lg">
+          <span>SYS VER: 4.8.1-NIGHT</span>
+          <span class="uppercase text-primary">MIL-SPEC GRADE DWR</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- INTERACTIVE ORDER NOW MODAL -->
+  <div id="order-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300 p-4">
+    <div class="relative w-full max-w-lg bg-surface-container border border-white/10 rounded-2xl p-6 sm:p-8 shadow-2xl overflow-hidden flex flex-col gap-5">
+      <!-- Close Button -->
+      <button id="close-order-modal" class="absolute top-5 right-5 text-neutral-400 hover:text-white transition-colors cursor-pointer p-1">
+        <span class="material-symbols-outlined text-[24px]">close</span>
+      </button>
+
+      <!-- Modal Header -->
+      <div class="flex flex-col gap-1 border-b border-white/5 pb-4">
+        <div class="flex items-center gap-2 text-emerald-400 font-mono text-xs font-bold">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>AUTHORIZED DISPATCH // JAIPUR HUB</span>
+        </div>
+        <h3 class="font-headline-md text-xl sm:text-2xl text-white font-bold uppercase tracking-tight">
+          ORDER COMET STORM EDITION
+        </h3>
+        <p class="text-xs text-neutral-400">
+          Retailer: <span class="text-white font-bold">Aashutosh Soni</span> · 2nd Year, Arya College, Jaipur
+        </p>
+      </div>
+
+      <!-- Order Form -->
+      <form id="order-form" class="flex flex-col gap-4">
+        <!-- Size Selection -->
+        <div class="flex flex-col gap-1.5">
+          <label class="font-mono text-xs text-neutral-300 uppercase font-bold">Select Size (US Men):</label>
+          <div class="grid grid-cols-5 gap-2" id="modal-size-grid">
+            <button type="button" class="modal-size-btn py-2 rounded bg-surface-container-low border border-white/10 text-xs font-mono font-bold text-white hover:border-white/30 transition-all cursor-pointer" data-size="US 7.0">7.0</button>
+            <button type="button" class="modal-size-btn py-2 rounded bg-surface-container-low border border-white/10 text-xs font-mono font-bold text-white hover:border-white/30 transition-all cursor-pointer" data-size="US 8.0">8.0</button>
+            <button type="button" class="modal-size-btn py-2 rounded bg-primary text-black border border-primary text-xs font-mono font-bold transition-all cursor-pointer active" data-size="US 9.5">9.5</button>
+            <button type="button" class="modal-size-btn py-2 rounded bg-surface-container-low border border-white/10 text-xs font-mono font-bold text-white hover:border-white/30 transition-all cursor-pointer" data-size="US 10.5">10.5</button>
+            <button type="button" class="modal-size-btn py-2 rounded bg-surface-container-low border border-white/10 text-xs font-mono font-bold text-white hover:border-white/30 transition-all cursor-pointer" data-size="US 12.0">12.0</button>
+          </div>
+        </div>
+
+        <!-- Name & Contact -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div class="flex flex-col gap-1">
+            <label class="font-mono text-[11px] text-neutral-400 uppercase">Your Name</label>
+            <input required="" type="text" id="cust-name" placeholder="Full Name" class="h-10 px-3 rounded-lg bg-surface-container-lowest border border-white/10 text-white text-xs font-mono focus:outline-none focus:border-primary"/>
+          </div>
+          <div class="flex flex-col gap-1">
+            <label class="font-mono text-[11px] text-neutral-400 uppercase">Phone / WhatsApp</label>
+            <input required="" type="tel" id="cust-phone" placeholder="+91 98765 43210" class="h-10 px-3 rounded-lg bg-surface-container-lowest border border-white/10 text-white text-xs font-mono focus:outline-none focus:border-primary"/>
+          </div>
+        </div>
+
+        <!-- Delivery City / Address -->
+        <div class="flex flex-col gap-1">
+          <label class="font-mono text-[11px] text-neutral-400 uppercase">Delivery Address / Hostel / Campus</label>
+          <input required="" type="text" id="cust-address" placeholder="Hostel No. / Street / City (e.g. Jaipur)" class="h-10 px-3 rounded-lg bg-surface-container-lowest border border-white/10 text-white text-xs font-mono focus:outline-none focus:border-primary"/>
+        </div>
+
+        <!-- Pricing Summary -->
+        <div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-lowest border border-white/5 text-xs font-mono">
+          <span class="text-neutral-400">Total Price (VAT &amp; Delivery Incl.):</span>
+          <span class="text-white font-bold text-sm">$220 USD / ₹18,499 INR</span>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" id="submit-order-btn" class="w-full h-12 rounded-lg bg-primary text-black font-mono font-bold text-xs uppercase tracking-wider hover:bg-neutral-200 transition-all shadow-lg flex items-center justify-center gap-2 cursor-pointer mt-1">
+          <span class="material-symbols-outlined text-[18px]">verified</span>
+          <span id="submit-btn-text">CONFIRM ORDER VIA AASHUTOSH SONI</span>
+        </button>
+      </form>
+
+      <!-- Order Confirmation Ticket (Initially Hidden) -->
+      <div id="order-success-ticket" class="hidden flex-col items-center text-center gap-3 py-4">
+        <div class="w-14 h-14 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+          <span class="material-symbols-outlined text-[32px]">check_circle</span>
+        </div>
+        <h4 class="font-bold text-lg text-white uppercase font-display">ORDER CONFIRMED &amp; ALLOCATED!</h4>
+        <p class="text-xs text-neutral-300 max-w-sm leading-relaxed">
+          Your order has been assigned to retailer <strong class="text-white">Aashutosh Soni</strong> at the Jaipur Hub (Arya College). You will receive dispatch updates on WhatsApp within 2 hours.
+        </p>
+        <div class="p-2.5 rounded bg-surface-container-lowest border border-white/10 font-mono text-xs text-emerald-400 font-bold">
+          ORDER TICKET: #CMT-JPR-<span id="ticket-id">8492</span>
+        </div>
+        <button type="button" id="modal-done-btn" class="mt-2 px-6 py-2 rounded bg-surface-container-high text-xs font-mono text-white hover:bg-surface-container-highest uppercase cursor-pointer">
+          Done
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

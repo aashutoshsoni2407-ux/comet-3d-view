@@ -18,12 +18,12 @@
   const loaderBar = document.getElementById('loader-bar');
   const loaderText = document.getElementById('loader-text');
 
-  const images = [];
+  const images = new Array(TOTAL_FRAMES);
   let loadedCount = 0;
   let targetProgress = 0;
   let currentProgress = 0;
   const lerpFactor = 0.12; // Smooth tracking
-  let lastFrameIndex = -1;
+  let lastDrawnImage = null;
   let isReady = false;
 
   function getFrameSrc(index) {
@@ -31,66 +31,97 @@
     return `${FRAME_PREFIX}${frameNum}${FRAME_EXT}`;
   }
 
-  // Preload all 240 frames
+  // Preload frames with 2-phase priority strategy
   function preloadImages() {
+    // Phase 1: Keyframe indices (every 4th frame: 0, 4, 8... 236)
+    const keyframes = [];
+    for (let i = 0; i < TOTAL_FRAMES; i += 4) {
+      keyframes.push(i);
+    }
+
+    // Phase 2: Remaining intermediate frames
+    const remaining = [];
     for (let i = 0; i < TOTAL_FRAMES; i++) {
+      if (i % 4 !== 0) remaining.push(i);
+    }
+
+    // Safety timeout: unlock preloader after 1.5s max regardless of network speed
+    setTimeout(() => {
+      unlockLoader();
+    }, 1500);
+
+    // Load a single frame helper
+    function loadFrame(i) {
+      if (images[i]) return;
       const img = new Image();
       img.src = getFrameSrc(i);
 
       img.onload = () => {
         loadedCount++;
         const pct = Math.round((loadedCount / TOTAL_FRAMES) * 100);
-
         if (loaderBar) loaderBar.style.width = `${pct}%`;
         if (loaderText) loaderText.textContent = `INITIALIZING ${pct}%`;
 
-        // Render first frame immediately
-        if (i === 0 && lastFrameIndex === -1) {
-          renderFrame(0);
+        // If this newly loaded image is near current scroll position or canvas is blank, redraw immediately!
+        const currentTargetFrame = Math.min(TOTAL_FRAMES - 1, Math.max(0, Math.floor(currentProgress * (TOTAL_FRAMES - 1))));
+        if (i === 0 || i === currentTargetFrame || Math.abs(i - currentTargetFrame) < 3 || !lastDrawnImage) {
+          renderFrame(currentTargetFrame, true);
         }
 
-        // Unlock page as soon as initial batch is ready
-        if (!isReady && (loadedCount >= 20 || loadedCount >= TOTAL_FRAMES)) {
-          isReady = true;
-          if (loader) {
-            loader.classList.add('loaded');
-            setTimeout(() => {
-              if (loader) loader.style.display = 'none';
-            }, 500);
-          }
+        // Unlock page once initial batch is ready (10 keyframes loaded)
+        if (!isReady && (loadedCount >= 10 || loadedCount >= TOTAL_FRAMES)) {
+          unlockLoader();
         }
       };
 
       img.onerror = () => {
         loadedCount++;
-        if (!isReady && loadedCount >= 20) {
-          isReady = true;
-          if (loader) {
-            loader.classList.add('loaded');
-            setTimeout(() => {
-              if (loader) loader.style.display = 'none';
-            }, 500);
-          }
+        if (!isReady && loadedCount >= 10) {
+          unlockLoader();
         }
       };
 
-      images.push(img);
+      images[i] = img;
     }
+
+    function unlockLoader() {
+      if (isReady) return;
+      isReady = true;
+      if (loader) {
+        loader.classList.add('loaded');
+        setTimeout(() => {
+          if (loader) loader.style.display = 'none';
+        }, 400);
+      }
+      // Force initial render
+      renderFrame(0, true);
+    }
+
+    // 1. Load frame 0 immediately
+    loadFrame(0);
+
+    // 2. Load keyframes pass
+    keyframes.forEach(idx => {
+      if (idx !== 0) loadFrame(idx);
+    });
+
+    // 3. Queue remaining intermediate frames with slight stagger
+    setTimeout(() => {
+      remaining.forEach(idx => loadFrame(idx));
+    }, 60);
   }
 
   // Canvas Sizing (Hi-DPI)
   function resizeCanvas() {
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    canvas.width = window.innerWidth * dpr;
-    canvas.height = window.innerHeight * dpr;
+    canvas.width = Math.round(window.innerWidth * dpr);
+    canvas.height = Math.round(window.innerHeight * dpr);
     ctx.imageSmoothingEnabled = true;
     ctx.imageSmoothingQuality = 'high';
 
-    if (lastFrameIndex >= 0) {
-      const current = lastFrameIndex;
-      lastFrameIndex = -1;
-      renderFrame(current);
-    }
+    lastDrawnImage = null; // force redraw
+    const currentTargetFrame = Math.min(TOTAL_FRAMES - 1, Math.max(0, Math.floor(currentProgress * (TOTAL_FRAMES - 1))));
+    renderFrame(currentTargetFrame, true);
   }
 
   // Find the closest loaded image so the canvas NEVER shows a blank or black frame
@@ -114,11 +145,12 @@
   }
 
   // Render Frame with Aspect-Ratio Cover
-  function renderFrame(index) {
-    if (index === lastFrameIndex) return;
-
+  function renderFrame(index, forceRedraw = false) {
     const img = getClosestAvailableImage(index);
     if (!img) return;
+
+    // Skip drawing if the exact same image object is already drawn
+    if (img === lastDrawnImage && !forceRedraw) return;
 
     const canvasRatio = canvas.width / canvas.height;
     const imgRatio = img.naturalWidth / img.naturalHeight;
@@ -138,14 +170,15 @@
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(img, offsetX, offsetY, drawWidth, drawHeight);
-    lastFrameIndex = index;
+    lastDrawnImage = img;
   }
 
   // Calculate Scroll Progress
   function updateScrollProgress() {
-    if (!scrollSpacer) return;
-    const scrollY = window.scrollY || window.pageYOffset || 0;
-    const maxTravel = scrollSpacer.offsetHeight;
+    const scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0;
+    const maxTravel = scrollSpacer && scrollSpacer.offsetHeight > 0 
+      ? scrollSpacer.offsetHeight 
+      : (window.innerHeight * 3.2);
 
     if (maxTravel <= 0) return;
 

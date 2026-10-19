@@ -9,7 +9,6 @@
 html {
   background-color: #121315;
   color: #e3e2e5;
-  overflow-x: hidden;
   scroll-behavior: auto;
 }
 
@@ -19,7 +18,7 @@ body {
   background-color: #121315;
   color: #e3e2e5;
   min-height: 100vh;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* Custom Scrollbar */

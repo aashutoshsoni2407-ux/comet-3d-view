@@ -6,8 +6,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "node server.js",
-    "build": "echo Static assets ready for deployment"
+    "dev": "node server.js"
   },
   "keywords": [
     "canvas",
